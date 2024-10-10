@@ -23,7 +23,8 @@ class GlowNotificationWidget extends StatelessWidget {
   bool _handleGlowNotification(OverscrollIndicatorNotification notification) {
     if ((notification.leading && !showGlowLeading) ||
         (!notification.leading && !showGlowTrailing)) {
-      notification.disallowIndicator();
+      // notification.disallowIndicator();
+      notification.disallowGlow();
       return true;
     }
     return false;
